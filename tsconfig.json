@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target" : "es6",
+    "moduleResolution": "node",
+    "jsx" : "preserve",
+    "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "sourceMap": false,
+    "baseUrl": "front"
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "useBabel": true,
+    "babelOptions": {
+      "presets": ["es2015", "stage-0", "react"],
+      "plugins": [
+        [ "import", { "libraryName": "antd", "style": true }]
+      ]
+    },
+    "useCache": false,
+    "emitRequireType": false
+  },
+  "include": [
+    "./front/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "name": "egg-react-mobx-ts-antd",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "dev": "egg-bin dev",
+    "build": "webpack --config ./build/webpack.config.dev.js --progress -w",
+    "build:prod": "npm run build:dll && webpack --config ./build/webpack.config.prod.js -p",
+    "build:dll": "webpack --config ./build/webpack.config.dll.js",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "dependencies": {
+    "egg": "^0.9.0",
+    "egg-view-ejs": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.5",
+    "@types/react": "^15.0.11",
+    "@types/react-dom": "^0.14.23",
+    "@types/react-router": "^3.0.3",
+    "antd": "^2.7.2",
+    "assets-webpack-plugin": "^3.5.1",
+    "autod": "^2.7.1",
+    "awesome-typescript-loader": "^3.0.4",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-import": "^1.1.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "css-loader": "^0.26.1",
+    "egg-bin": "^2.0.2",
+    "egg-ci": "^1.1.0",
+    "egg-mock": "^2.1.0",
+    "eslint": "^3.13.1",
+    "eslint-config-egg": "^3.2.0",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "mobx": "^3.1.0",
+    "mobx-react": "^4.1.0",
+    "postcss-loader": "^1.3.0",
+    "postcss-nested": "^1.0.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.2",
+    "supertest": "^2.0.1",
+    "typescript": "^2.1.6",
+    "webpack": "^2.2.1"
+  },
+  "engines": {
+    "node": ">=6.9.1"
+  },
+  "ci": {
+    "version": "6"
+  },
+  "config": {
+    "antd": {
+      "theme": {
+        "@primary-color": "#ff9900"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "tvrcgo",
+  "license": "MIT"
+}

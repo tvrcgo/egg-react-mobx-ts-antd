@@ -1,0 +1,18 @@
+:global {
+  body {
+    background-color: #eee !important;
+  }
+}
+
+.wrap {
+  padding-top: 60px;
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.main {
+  background-color: #fff;
+  margin: 15px 0;
+  padding: 15px;
+}
