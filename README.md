@@ -10,7 +10,7 @@
 
 ### Server
 
-- egg (see [egg docs][egg] for more detail.)
+- egg
 
 ## Start
 
