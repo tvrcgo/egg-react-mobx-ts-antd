@@ -22,7 +22,7 @@ interface IRoute {
 export default class Loader implements ILoader {
 
   private $config: ILoaderConfig
-  private $router: any
+  private $router: JSX.Element
 
   constructor(config: ILoaderConfig = {}) {
     this.$config = config

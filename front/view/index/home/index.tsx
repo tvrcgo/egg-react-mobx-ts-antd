@@ -2,13 +2,20 @@ import * as React from 'react'
 import { mixin } from 'lib/mixin'
 
 import { Button } from 'antd'
-import Store, { Props } from './index.store'
+import Store from './index.store'
 const css = require('./index.css')
+import Hello from 'component/Hello'
 
-const HomeView = ({ title, store }: Props) => {
+interface Props {
+  title: string
+  store: Store
+}
+
+const HomeView = ({ store }: Props) => {
   return (
     <div className={css.wrap}>
       <div className={css.main}>
+        <Hello user='ts' />
         count: {store.count} <Button type='primary' onClick={store.add}>add</Button>
       </div>
     </div>

@@ -5,9 +5,9 @@ interface IStore {
   add(): void
 }
 
-class HomeStore implements IStore {
+class Store implements IStore {
 
-  @observable id = 0
+  @observable private id: number
 
   constructor({ id = 3 }) {
     this.id = id
@@ -18,26 +18,12 @@ class HomeStore implements IStore {
     return this.id
   }
 
-  @action
-  add = () => {
+  @action.bound
+  add() {
     this.id++
   }
 }
 
-interface Props {
-  title?: string,
-  store: IStore
-}
-
-const Store = (props: any) => {
-  const store = new HomeStore(props)
-  return {
-    title: 'square',
-    store
-  }
-}
-
 export {
-  Store as default,
-  Props
+  Store as default
 }

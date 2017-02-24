@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target" : "es6",
     "moduleResolution": "node",
-    "jsx" : "preserve",
+    "jsx" : "react",
     "experimentalDecorators": true,
     "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,

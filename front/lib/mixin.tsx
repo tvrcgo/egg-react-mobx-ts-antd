@@ -1,20 +1,21 @@
 import * as React from 'react'
 import { observer } from 'mobx-react'
+import { observable } from 'mobx'
 
 // mix view component and stores
-const mixin = (View: any, Store: any) => {
+const mixin = (View: React.StatelessComponent<any>, Store: any) => {
   return observer(class ViewComponent extends React.Component<any, any> {
     private store: any
 
-    constructor(props) {
+    constructor(props: any) {
       super(props)
       // init store with props
-      this.store = typeof Store === 'function' ? Store(this.props) : Store
+      this.store = typeof Store === 'function' ? new Store(this.props) : observable(Store)
     }
     render() {
-      View = observer(View)
+      const ObView = observer(View)
       return (
-        <View {...this.props} {...this.store} />
+        <ObView {...this.props} store={this.store} />
       )
     }
   })
