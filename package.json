@@ -43,7 +43,7 @@
     "egg-mock": "^2.1.0",
     "eslint": "^3.13.1",
     "eslint-config-egg": "^3.2.0",
-    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "extract-text-webpack-plugin": "^2.0.0",
     "json-loader": "^0.5.4",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
