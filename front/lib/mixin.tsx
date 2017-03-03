@@ -9,9 +9,14 @@ const mixin = (View: React.StatelessComponent<any>, Store: any) => {
 
     constructor(props: any) {
       super(props)
+      this.store = observable({})
+    }
+
+    componentWillMount() {
       // init store with props
       this.store = typeof Store === 'function' ? new Store(this.props) : observable(Store)
     }
+
     render() {
       const ObView = observer(View)
       return (
