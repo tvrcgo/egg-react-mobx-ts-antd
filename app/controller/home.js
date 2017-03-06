@@ -1,10 +1,8 @@
-'use strict';
 
 exports.index = function* index() {
-  yield this.render('index.ejs', {
+  yield this.launch('index.ejs', {
     title: 'Hi, node',
     entry: 'index',
-    assets: this.assets,
     props: {}
   })
-};
+}
