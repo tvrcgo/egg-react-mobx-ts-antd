@@ -6,9 +6,7 @@ const root = process.cwd()
 const front = join(root, 'front')
 const pkg = require(join(root, 'package.json'))
 
-const entry = name => {
-  return join(front, 'view', name, 'index')
-}
+const entry = name => join(front, 'view', name, 'index')
 
 module.exports = {
   entry: {
