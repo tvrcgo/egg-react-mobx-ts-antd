@@ -38,10 +38,6 @@ module.exports = {
       {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract([ 'css-loader', `less-loader?{modifyVars:${JSON.stringify(pkg.config.antd.theme)}}` ])
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
       }
     ]
   },
