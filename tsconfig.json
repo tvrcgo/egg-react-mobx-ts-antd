@@ -23,7 +23,7 @@
     "emitRequireType": false
   },
   "include": [
-    "./front/**/*"
+    "./front"
   ],
   "exclude": [
     "node_modules"

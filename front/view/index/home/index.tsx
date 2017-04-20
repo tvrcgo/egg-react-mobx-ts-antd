@@ -2,8 +2,8 @@ import * as React from 'react'
 import { mixin } from 'lib/mixin'
 
 import { Button } from 'antd'
-import Store from './index.store'
-const css = require('./index.css')
+import Store from './index.st'
+import css from './index.css'
 import Hello from 'component/Hello'
 
 interface Props {
