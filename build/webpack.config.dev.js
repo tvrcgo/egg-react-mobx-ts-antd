@@ -7,8 +7,8 @@ config.output = assign(config.output, {
   filename: 'bundle/[name].js',
 })
 
-config.plugins = config.plugins.concat([
+config.plugins.push(
   new ExtractTextPlugin('style/[name].css')
-])
+)
 
 module.exports = config

@@ -7,7 +7,7 @@ config.output = assign(config.output, {
   filename: 'bundle/[name].[hash:8].js'
 })
 
-config.plugins = config.plugins.concat([
+config.plugins.push(
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: JSON.stringify('production')
@@ -23,6 +23,6 @@ config.plugins = config.plugins.concat([
       comments: false
     }
   })
-])
+)
 
 module.exports = config
